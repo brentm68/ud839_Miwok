@@ -2,21 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/tan_background"
+    android:minHeight="@dimen/list_item_height">
 
-    <TextView
-        android:id="@+id/miwok_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Lutti"
+
+    <ImageView
+        android:id="@+id/icon_image_view"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:visibility="visible"
         />
 
-    <TextView
-        android:id="@+id/default_text_view"
+    <LinearLayout
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="one"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/miwok_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:paddingLeft="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            tools:text="Lutti" />
+
+        <TextView
+            android:id="@+id/default_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:paddingLeft="16dp"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            tools:text="one" />
+
+    </LinearLayout>
 </LinearLayout>
